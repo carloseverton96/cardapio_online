@@ -6,10 +6,22 @@
     <title>Restaurante - Seja bem-vindo!</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/main.css">
 
 </head>
 <body>
+
+    <div class="container-mensagens" id="container-mensagens">
+
+    </div>
+
+    <a class="botao-carrinho hidden">
+        <div class="badge-total-carrinho" onclick="cardapio.metodos.abrirCarrinho(true)">0</div>
+        <i class="fa fa-shopping-bag"></i>
+    </a>
+
+
     <section class="header">
         <div class="container">
             <nav class="navbar-expand-lg pl-0 pr-0">
@@ -28,8 +40,9 @@
                         <li class="nav-item"><a href="#cardapio" class="nav-link"><b>Cardápio</b></a></li>
                         <li class="nav-item"><a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a></li>
                     </ul>
-                    <a class="btn btn-white btn-icon">
+                    <a class="btn btn-white btn-icon" onclick="cardapio.metodos.abrirCarrinho(true)">
                         Meu carrinho&nbsp; <span class="icon">
+                            <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
                             <i class="fa fa-shopping-bag"></i>
                         </span>
                     </a>
@@ -361,7 +374,7 @@
         
         <div class="m-header">
             <div class="container">
-                <a class="btn btn-white btn-sm float-right" href="#">
+                <a class="btn btn-white btn-sm float-right" onclick="cardapio.metodos.abrirCarrinho(false)">
                     Fechar
                 </a>
                 <div class="etapas">
@@ -370,7 +383,7 @@
                     <div class="etapa etapa3">3</div>
                 </div>
                 <p class="title-carinho">
-                    <b id="lblTituloEtaa">Seu carinho</b>
+                    <b id="lblTituloEtapa">Seu carinho</b>
                 </p>
             </div>
         </div>
@@ -379,7 +392,7 @@
 
             <div class="container">
 
-                <div id="itensCarinho" class="row  mr-0 ml-0 hidden">
+                <div id="itensCarinho" class="row  mr-0 ml-0">
                     
                     <div class="col-12 item-carinho">
                         <div class="img-produto">
@@ -397,7 +410,8 @@
                         </div>
                     </div>
                 </div> 
-                    
+            </div>
+        </div>        
                 <div id="localEntrega" class="row mr-0 ml-0 hidden">
 
                     <div class="col-4">
@@ -483,7 +497,7 @@
 
                 </div>
             
-                <div id="resumoCarinho" class="mr-0 ml-0">
+                <div id="resumoCarinho" class="mr-0 ml-0 hidden">
                     <div class="col-12">
                         <p class="title-carinho mt-4">
                             <b>Itens do pedido</b>
@@ -536,12 +550,7 @@
 
 
                 </div>
-                    
-               
-            </div>
-        </div>
-
-              
+            
 
         <div class="m-footer">
 
@@ -575,8 +584,6 @@
             </div>
 
         </div>
-
-
 
     </div>
 
