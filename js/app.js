@@ -455,7 +455,7 @@ cardapio.metodos = {
         cardapio.metodos.finalizarPedido();
     },
 
-    //Atualiza o link do botão WhatsApp
+    //atualizar o link do botão do WhatsApp
     finalizarPedido: () => {
 
         if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
@@ -468,37 +468,61 @@ cardapio.metodos = {
             texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.',',')}`;
 
             var itens = '';
+
             $.each(MEU_CARRINHO, (i,e) => {
 
-                itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.',',')}
-            }) \n`;
+                itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.',',')} \n`;
 
-        //íltimo item
-        if ((i, e) == MEU_CARRINHO.length) {
+                //último item
+                if ((i, e) == MEU_CARRINHO.length) {
 
-            texto = texto.replace(/\${itens}/g, itens);
+                texto = texto.replace(/\${itens}/g, itens);
 
-            //converter a URL
-            let encode = encodeURI(texto);`
-            `// alterar o número do Whatsapp
-            let URL = `htps://wa.me/${CELULAR_EMPRESA}?text={encode}`;
+                //converter a URL
+                let encode = encodeURI(texto);
+                let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
 
-            $("#btnEtapaResumo").attr('href', URL);
-
+                $("#btnEtapaResumo").attr('href', URL);
+        }
+            })
 
 
 
         }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    },
 
-        
-        })
-
-    }
 
 
 
 
-    //mensagens
+
+
+
+
+
+
+
+
+
+
+    
+
+
+//mensagens
     mensagem: (texto, cor = 'red', tempo = 3500) => {
         
         let id = Math.floor(Date.now() * Math.random()).toString();
@@ -515,9 +539,7 @@ cardapio.metodos = {
             },800);
         }, tempo)
     }
-    }
 },
-
 
 cardapio.templates = {
     
