@@ -479,8 +479,6 @@ align-items: end;
 } .container-redes-footer {
     justify-content: end;
 }
-/* atenção coloquei o hidden aqui no CSS, depois é só tirar */
-
 
 .modal-full  {
     position: fixed;
