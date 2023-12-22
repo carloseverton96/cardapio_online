@@ -8,7 +8,7 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA  = 5;
+var VALOR_ENTREGA  = 7.3;
 
 var CELULAR_EMPRESA = '5588988775820'
 
@@ -16,6 +16,10 @@ cardapio.eventos = {
 
     init: () =>{
         cardapio.metodos.obterItensCardapio();
+        cardapio.metodos.carregarBotaoReserva();
+        cardapio.metodos.carregarBotaoLigar();
+        cardapio.metodos.botaoWhatsApp();
+
     }
 
 }
@@ -474,7 +478,7 @@ cardapio.metodos = {
                 itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.',',')} \n`;
 
                 //último item
-                if ((i, e) == MEU_CARRINHO.length) {
+                if ((i + 1) == MEU_CARRINHO.length) {
 
                 texto = texto.replace(/\${itens}/g, itens);
 
@@ -490,32 +494,61 @@ cardapio.metodos = {
 
         }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     
+    },
+
+    //carrega o link do botão reserva
+    carregarBotaoReserva: () => {
+        var texto = 'olá! gostaria de fazer uma *reserva.*';
+
+        let encode = encodeURI(texto);
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+        $("#btnReserva").attr('href', URL);
+
     },
 
 
+    carregarBotaoLigar: () => {
+$("#btnLigar").attr('href', `tel:$(CELULAR_EMPRESA)`);
 
+    },
 
+    //abrir os depoimentos
+    abrirDepoimento: (depoimento) => {
 
+        $("#depoimento-1").addClass('hidden');
+        $("#depoimento-2").addClass('hidden');
+        $("#depoimento-3").addClass('hidden');
 
+        $("#depoimento-1").removeClass('active');
+        $("#depoimento-2").removeClass('active');
+        $("#depoimento-3").removeClass('active');
 
+        $("#depoimento-" + depoimento).removeClass('hidden');
+        $("#btnDepoimento-" + depoimento).addClass('active');
 
+    },
 
+    botaoWhatsApp: () => {
+        var texto = 'Olá! gostaria de fazer um *pedido, pode me ajudar?*';
 
+        let encode = encodeURI(texto);
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
 
+        $("#btnWhatsApp").attr('href', URL);
 
+    },
+
+    botaoWhatsApp: () => {
+        var texto = 'Olá! gostaria de fazer um *pedido, pode me ajudar?*';
+
+        let encode = encodeURI(texto);
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+        $("#btnWhatsApp2").attr('href', URL);
+
+    },
 
 
 
@@ -544,7 +577,7 @@ cardapio.metodos = {
 cardapio.templates = {
     
     item: `
-        <div class="col-3">
+        <div class="col-3 animated fadeInUp">
             <div class="card card-item id="\${id}">
                 <div class="img-produto">
                     <img src="\${img}"/>

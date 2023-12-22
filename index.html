@@ -16,16 +16,16 @@
 
     </div>
 
-    <a class="botao-carrinho hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
+    <a class="botao-carrinho animated fadeIn hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
         <div class="badge-total-carrinho" >0</div>
         <i class="fa fa-shopping-bag"></i>
     </a>
 
 
-    <section class="header">
+    <section class="header animated fadeIn">
         <div class="container">
             <nav class="navbar-expand-lg pl-0 pr-0">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand animated fadeIn" href="#">
                     <img src="./img/logo.png" width="160" class="img-logo"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
@@ -33,14 +33,14 @@
                         <i class="fas fa-bars"></i>
                     </span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse wow fadeIn" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto mr-auto">
                         <li class="nav-item"><a href="#reservas" class="nav-link"><b>Reservas</b></a></li>
                         <li class="nav-item"><a href="#servicos" class="nav-link"><b>Serviços</b></a></li>
                         <li class="nav-item"><a href="#cardapio" class="nav-link"><b>Cardápio</b></a></li>
                         <li class="nav-item"><a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a></li>
                     </ul>
-                    <a class="btn btn-white btn-icon" onclick="cardapio.metodos.abrirCarrinho(true)">
+                    <a class="btn btn-white btn-icon animated fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
                         Meu carrinho&nbsp; <span class="icon">
                             <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
                             <i class="fa fa-shopping-bag"></i>
@@ -51,7 +51,7 @@
         </div>
     </section>
 
-    <section class="banner">
+    <section class="banner animated fadeIn delay-03s">
         <div class="container">
             <div class="row">
                 <di class="col-6">
@@ -64,7 +64,7 @@
                             <a class="btn btn-yellow mt-4 mr-3">
                                 Ver cardápio
                             </a>
-                            <a href="#" class="btn btn-white btn-icon-left mt-4">
+                            <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnLigar">
                                 <span class="icon-left">
                                     <i class="fa fa-phone"></i>
                                 </span>
@@ -72,14 +72,14 @@
                             </a>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a href="https://www.instagram.com/carloseverton96/" class="btn btn-sm btn-white btn-social mt-4 mr-3" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a href="https://www.instagram.com/carloseverton96/" class="btn btn-sm btn-white btn-social mt-4 mr-3" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-white btn-social mt-4">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="#" class="btn btn-sm btn-white btn-social mt-4" id="btnWhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp" ></i>
                     </a>
                 </di> 
                 <div class="col-6">
@@ -100,11 +100,11 @@
         </div>
     </section>
 
-    <section class="servicos" id="servicos">
+    <section class="servicos wow fadeIn" id="servicos">
         <div class="background-servicos">
 
         </div>
-            <div class="col-12 text-center mb-5">
+            <div class="col-12 text-center mb-5 wow fadeIn">
                 <div class="container">
                     <span class="hint-title"><b>Serviços</b></span>
                     <h1 class="title">
@@ -114,10 +114,10 @@
             </div>    
 
             <div class="col-4 mb-5">
-                <div class="card-icon text-center">
+                <div class="card-icon text-center wow fadeIn">
                     <img src="./img/icone-pedido.svg" alt="pedido" width="150"/>
                 </div>
-                <div class="card-text text-center mt-3">
+                <div class="card-text text-center mt-3 wow fadeIn">
                     <p><b>Fácil de pedir</b></p>
                     <span>
                         Você só precisa de alguns passos para pedir sua comida.
@@ -126,7 +126,7 @@
             </div>
 
             <div class="col-4 mb-5">
-                <div class="card-icon text-center">
+                <div class="card-icon text-center wow fadeIn">
                     <img src="./img/icone-delivery.svg" alt="pedido" width="250"/>
                 </div>
                 <div class="card-text text-center mt-3">
@@ -137,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="col-4 mb-5">
+            <div class="col-4 mb-5 wow fadeIn">
                 <div class="card-icon text-center">
                     <img src="./img/icone-qualidade.svg" alt="pedido" width="250"/>
                 </div>
@@ -150,17 +150,17 @@
             </div>
     </section>
 
-    <section class="cardapior" id="cardapio">
+    <section class="cardapior wow fadeInUp" id="cardapio">
         <div class="container">
-            <div class="row">
+            <div class="row wow fadeInUp-delay-05s">
                 <div class="col-12 text-center mb-5">
-                        <span class="hint-title"><b>Cardápio</b></span>
-                        <h1 class="title">
+                        <span class="hint-title wow fadeInUp delay-05s"><b>Cardápio</b></span>
+                        <h1 class="title wow fadeInUp-delay-05s">
                             <b>Conheça o nosso cardápio</b>
                         </h1>
                     </div>
                 </div>
-                <div class="col-12 container-menu">
+                <div class="col-12 container-menu animated fadeInUp delay-05s">
                     <a id="menu-burgers" class="btn btn-white  btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('burgers')">
                     <i class="fas fa-hamburger"></i>&nbsp;Burgers
                     </a>
@@ -192,28 +192,28 @@
                     </div>
                 </div>
                 
-                <div class="col-12 text-center mt-3">
-                    <a id="btnVerMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.verMais()"> Ver mais</a>
+                <div class="col-12 text-center mt-3 wow fadeInUp">
+                    <a id="btnVerMais" class="btn btn-white btn-sm wow fadeInUp" onclick="cardapio.metodos.verMais()"> Ver mais</a>
                 </div>
             </div>
         </div>
 
     </section>
 
-    <section class="depoimentos" id="depoimentos">
+    <section class="depoimentos animated fadeIn delay-05s" id="depoimentos">
         <div class="background-depoimentos"></div>
 
-        <div class="container">
-            <div class="row">
+        <div class="container wow animated fadeIn delay-05s">
+            <div class="row wow animated fadeIn delay-05s">
 
-                <div class="col-5 text-center">
-                    <div class="card-depoimentos"></div>
-                    <div class="d-flex img-banner">
+                <div class="col-5 text-center animated fadeIn delay-05s">
+                    <div class="card-depoimentos animated fadeIn delay-05s"></div>
+                    <div class="d-flex img-banner animated fadeIn delay-05s">
                         <img src="./img/pizzas.png" alt="Pizzas">
                     </div>
                 </div>
 
-                <div class="col-7">
+                <div class="col-7 animated fadeIn delay-05s">
                     <span class="hint-title"><b>Depoimentos</b></span>
                     <h1 class="title">
                         <b>O que dizem sobre nós?</b>
@@ -292,9 +292,9 @@
                     </div>
 
                     <div>
-                        <a class="btn btn-sm btn btn-white btn-social active mr-3" href="#">1</a>
-                        <a class="btn btn-sm btn btn-white btn-social mr-3" href="#">2</a>
-                        <a class="btn btn-sm btn btn-white btn-social" href="#">3</a>
+                        <a id="btnDepoimento-1" class="btn btn-sm btn btn-white btn-social active mr-3"  onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
+                        <a id="btnDepoimento-2" class="btn btn-sm btn btn-white btn-social mr-3"  onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
+                        <a id="btnDepoimento-3" class="btn btn-sm btn btn-white btn-social"  onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
                     </div>
 
                 </div>
@@ -318,7 +318,7 @@
                                 Mande uma mensagem clicando no botão abaixo<br>
                                 Reserve sua data e horáriode forma simples e rápida.
                             </p>
-                            <a class="btn btn-yellow mt-4" href="#">
+                            <a class="btn btn-yellow mt-4" href="#" id="btnReserva" target="_blank">
                                 Fazer reserva
                             </a>
 
@@ -354,14 +354,14 @@
                 </div>
 
                 <div class="col-3 container-redes-footer">
-                    <a href="" class="btn btn-sm btn-white btn-social mr-3">
+                    <a href="https://www.instagram.com/carloseverton96/" class="btn btn-sm btn-white btn-social mt-4 mr-3" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="" class="btn btn-sm btn-white btn-social mr-3">
+                    <a href="https://www.instagram.com/carloseverton96/" class="btn btn-sm btn-white btn-social mt-4 mr-3" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="" class="btn btn-sm btn-white btn-social ">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="#" class="btn btn-sm btn-white btn-social mt-4" id="btnWhatsApp2" target="_blank">
+                        <i class="fab fa-whatsapp" ></i>
                     </a>
                 </div>
 
@@ -370,7 +370,7 @@
     </footer>
 
 
-    <div class="modal-full hidden" id="modalCarrinho">
+    <div class="modal-full hidden animated fadeIn delay-02s" id="modalCarrinho">
         
         <div class="m-header">
             <div class="container">
@@ -392,12 +392,12 @@
 
             <div class="container">
 
-                <div id="itensCarrinho" class="row  mr-0 ml-0 hidden">
+                <div id="itensCarrinho" class="row  mr-0 ml-0 animated fadeIn delay-02s hidden">
                     
                     
                 </div> 
                     
-                <div id="localEntrega" class="row mr-0 ml-0 hidden">
+                <div id="localEntrega" class="row mr-0 ml-0 animated fadeIn delay-02s hidden">
 
                     <div class="col-4">
                         <div class="form-group container-cep">
@@ -484,7 +484,7 @@
 
                 </div>
             
-                <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn hidden">
+                <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn delay-02s hidden">
                     <div class="col-12">
                         <p class="title-carrinho mt-4">
                             <b>Itens do pedido:</b>
@@ -559,5 +559,8 @@
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/dados.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
+
+    <scrip src="js/wow.min.js"></scrip>
+    <script>new WOW().init();</script>
 </body>
 </html>
